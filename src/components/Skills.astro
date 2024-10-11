@@ -1,0 +1,24 @@
+---
+import * as Icons from '../Icon/index.js';
+
+import SkillBadge from './SkillBadge.astro';
+
+const skills = [  
+	{ label: 'Html', icon: Icons.HtmlIcon },  
+	{ label: 'Css', icon: Icons.CssIcon },  
+	{ label: 'JavaScript', icon: Icons.JavaScriptIcon },
+	{ label: 'React', icon: Icons.ReactIcon }, 
+	{ label: 'Astro', icon: Icons.AstroIcon },  
+	{ label: 'TypeScript', icon: Icons.TypeScriptIcon },
+	{ label: 'Tailwind Css', icon: Icons.TailwindCssIcon }
+];
+---
+
+<div class="flex flex-row gap-5 flex-wrap w-full max-w-[1280px]">
+    
+    {skills.map(skill => (
+        <SkillBadge label={skill.label} IconComponent={skill.icon}/>
+    ))}
+    
+    
+</div>

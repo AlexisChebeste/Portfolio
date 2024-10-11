@@ -5,17 +5,20 @@ import logoAlex from '../images/logoAlex.svg'
 import LinkedInIcon from '../Icon/Linkedin.astro'
 import SocialPill from '../components/SocialPill.astro';
 import GitHubIcon from '../Icon/GitHub.astro';
+import Skills from '../components/Skills.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+
+
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<!--colocar al div lg:w-[1280px]  !-->
-		<div class="w-full flex flex-col justify-between items-center gap-16 mt-9 max-w-[1280px] lg:flex-row-reverse lg:min-w-[1024px] xl:min-w-[1280px]">
+<Layout title="Portfolio de Alexis">
+	<main class="flex flex-col w-full items-center gap-24 m-12">
+
+		<SectionContainer class="items-center gap-24 max-w-[1280px] lg:flex-row-reverse ">
 			
-			<section>
-				<Image src={logoAlex} alt='Logo' class="w-80 h-80 lg:w-[428px] lg:h-[428px]"/>
-			</section>
-			<section class="flex flex-col gap-6  max-w-[550px]">
+			<Image src={logoAlex} alt='Logo' class="size-80 lg:size-[428px]" loading="eager"/>
+			
+			<div class="flex flex-col gap-6  max-w-[550px]">
 				<h1 class="text-white  text-5xl font-black">Hey, soy Alexis</h1>
 				<h2 class="text-lg text-opacity-80">
 					<strong class="text-blue-600">Desarrollador Front-End</strong> 
@@ -23,20 +26,55 @@ import GitHubIcon from '../Icon/GitHub.astro';
 				</h2>
 				
 				<nav class="flex gap-x-2">
-					<SocialPill href="https://www.linkedin.com/in/alexischebeste/" >
-						<LinkedInIcon class="w-4 h-4"/> 
+					<SocialPill href="https://www.linkedin.com/in/alexischebeste/" aria-label="Link a perfil de Linkedin">
+						<LinkedInIcon class="size-4"/> 
 						Linkedin 
 					</SocialPill>
-					<SocialPill href="https://github.com/AlexisChebeste" >
-						<GitHubIcon class="w-4 h-4"/> 
+					<SocialPill href="https://github.com/AlexisChebeste" aria-label="Link a perfil de GitHub">
+						<GitHubIcon class="size-4"/> 
 						GitHub
 					</SocialPill>
 				</nav>
-				<a href="http://" target="_blank" class="bg-blue-600  px-5 py-3 rounded-full flex justify-center items-center w-max hover:scale-110 hover:bg-white hover:text-black transition">Descargar CV</a>
-			</section>
-		</div>
+<!-- 				<a href="http://" target="_blank" class="bg-blue-600  px-5 py-3 rounded-full flex justify-center items-center w-max hover:scale-110 hover:bg-white hover:text-black transition">Descargar CV</a> -->
+			</div>
 		
+		</SectionContainer>
+		<SectionContainer id="sobre-mí">
+			<h3 class="text-2xl">Sobre Mí</h3>
+			<div class="flex flex-col w-full justify-between items-center  lg:flex-row-reverse ">
+				<Image src={logoAlex} alt='Logo' class="size-64 " loading="eager"/>
+				
+				<div class="flex flex-col gap-6 max-w-[564px] max-h-64 py-4 align-middle">
+					<p>Me llamo <strong>Alexis Chebeste</strong>, soy un desarrollador front-end. Me apasiona crear interfaces de usuario de alta calidad que sean fáciles de usar. </p>
+					<p>Tengo una sólida formación universitaria en desarrollo web front-end, en la cual estoy constantemente aprendiendo nuevas tecnologías para mejorar mis habilidades.  </p>
+					<p>Disfruto trabajar con otros desarrolladores y diseñadores talentosos para crear experiencias digitales increíbles.</p>
+				</div>
+			</div>
+		</SectionContainer>
+		
+		<SectionContainer id="skills" >
+			<h3 class="text-2xl">Skills</h3>
+			<Skills/>
+		</SectionContainer> 
 	</main>
+	<footer class="flex flex-col mb-8 w-full gap-10 max-w-[1280px]">
+		<nav class="flex opacity-80 py-2 justify-between items-center ">
+			<a href="#top" class="hover:text-blue-500  transition">Inicio</a>
+			<a href="#sobre-mí"  class="hover:text-blue-500 transition">Sobre mí</a>
+			<a href="#contacto"  class="hover:text-blue-500 transition">Contacto</a>
+		</nav>
+		<div class="flex opacity-80 py-2 justify-between items-center" >
+			<p>© 2024 Derechos reservados</p>
+			<div class="flex opacity-80 gap-4">
+				<a href="https://github.com/AlexisChebeste" aria-label="Perfil de GitHub de Alexis Chebeste, desarrollador Front-End" target="_blank" rel="noopener noreferrer">
+					<GitHubIcon class="size-4 hover:scale-150"/>
+				</a>
+				<a href="https://www.linkedin.com/in/alexischebeste//" aria-label="Perfil de LinkeIn de Alexis Chebeste, desarrollador Front-End" target="_blank" rel="noopener noreferrer" >
+					<LinkedInIcon class="size-4 hover:scale-150"/>	
+				</a>
+			</div>	
+		</div>	
+	</footer>
 </Layout>
 
 <style>
