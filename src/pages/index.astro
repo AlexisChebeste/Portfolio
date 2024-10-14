@@ -1,7 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import {Image} from 'astro:assets';
-import logoAlex from '../images/logoAlex.svg'
+import logoAlex from '../assets/logoAlex.svg'
+import fotoPersonal from '../assets/yo.jpg';
 import LinkedInIcon from '../Icon/Linkedin.astro'
 import SocialPill from '../components/SocialPill.astro';
 import GitHubIcon from '../Icon/GitHub.astro';
@@ -16,7 +17,7 @@ import SectionContainer from '../components/SectionContainer.astro';
 
 		<SectionContainer class="items-center gap-24 max-w-[1280px] lg:flex-row-reverse ">
 			
-			<Image src={logoAlex} alt='Logo' class="size-80 lg:size-[428px]" loading="eager"/>
+			<Image src={logoAlex} alt='Logo' loading="eager"/>
 			
 			<div class="flex flex-col gap-6  max-w-[550px]">
 				<h1 class="text-gray-900 dark:text-white  text-5xl font-black">Hey, soy Alexis</h1>
@@ -42,7 +43,7 @@ import SectionContainer from '../components/SectionContainer.astro';
 		<SectionContainer id="sobre-mí">
 			<h3 class="text-2xl">Sobre Mí</h3>
 			<div class="flex flex-col w-full justify-between items-center  lg:flex-row-reverse ">
-				<Image src={logoAlex} alt='Logo' class="size-64 " loading="eager"/>
+				<Image src={fotoPersonal} alt='Logo' class="size-64 object-cover border-2 border-gray-400 " loading="eager"/>
 				
 				<div class="flex flex-col gap-6 max-w-[564px] max-h-64 py-4 align-middle">
 					<p>Me llamo <strong>Alexis Chebeste</strong>, soy un desarrollador front-end. Me apasiona crear interfaces de usuario de alta calidad que sean fáciles de usar. </p>
