@@ -1,0 +1,23 @@
+---
+import LinkedInIcon from '../Icon/Linkedin.astro'
+import GitHubIcon from '../Icon/GitHub.astro';
+---
+
+<footer class="flex flex-col mb-8 w-full gap-10 max-w-[1280px] px-4 text-black dark:text-white">
+    <nav class="flex dark:opacity-80 py-2 justify-between items-center ">
+        <a href="#top" class="hover:text-blue-500  transition">Inicio</a>
+        <a href="#sobre-mí"  class="hover:text-blue-500 transition">Sobre mí</a>
+        <a href="#contacto"  class="hover:text-blue-500 transition">Contacto</a>
+    </nav>
+    <div class="flex dark:opacity-80 py-2 justify-between items-center" >
+        <p>© 2024 Derechos reservados</p>
+        <div class="flex gap-4">
+            <a href="https://github.com/AlexisChebeste" aria-label="Perfil de GitHub de Alexis Chebeste, desarrollador Front-End" target="_blank" rel="noopener noreferrer">
+                <GitHubIcon class="size-4 hover:scale-150"/>
+            </a>
+            <a href="https://www.linkedin.com/in/alexischebeste//" aria-label="Perfil de LinkeIn de Alexis Chebeste, desarrollador Front-End" target="_blank" rel="noopener noreferrer" >
+                <LinkedInIcon class="size-4 hover:scale-150"/>	
+            </a>
+        </div>	
+    </div>	
+</footer>
