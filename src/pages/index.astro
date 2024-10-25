@@ -1,8 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import {Image} from 'astro:assets';
+import {Image, Picture} from 'astro:assets';
 import logoAlex from '../assets/logoAlex.svg'
-import fotoPersonal from '../assets/yo.jpg';
+import fotoPersonal from '../assets/foto-sobre-mi.jpg';
 import LinkedInIcon from '../Icon/Linkedin.astro'
 import SocialPill from '../components/SocialPill.astro';
 import GitHubIcon from '../Icon/GitHub.astro';
@@ -13,13 +13,15 @@ import SectionContainer from '../components/SectionContainer.astro';
 ---
 
 <Layout title="Portfolio de Alexis">
-	<main class="flex flex-col w-full items-center gap-24 m-12 px-4">
+	<main class="flex flex-col w-full items-center gap-24 m-12 px-4 md:px-7">
 
-		<SectionContainer class="items-center gap-24 max-w-[1280px] lg:flex-row-reverse ">
+		<SectionContainer class="lg:items-center gap-20  lg:flex-row-reverse ">
+			<div class="flex justify-center">
+				<Image src={logoAlex} alt='Logo' loading="eager"/>
+			</div>
 			
-			<Image src={logoAlex} alt='Logo' loading="eager"/>
 			
-			<div class="flex flex-col gap-6  max-w-[550px]">
+			<div class="flex flex-col gap-6 max-w-xl">
 				<h1 class="text-gray-900 dark:text-white  text-5xl font-black">Hey, soy Alexis</h1>
 				<h2 class="text-lg ">
 					<strong class="text-yellow-500  dark:text-yellow-300">Desarrollador Front-End</strong> 
@@ -41,20 +43,25 @@ import SectionContainer from '../components/SectionContainer.astro';
 		
 		</SectionContainer>
 		<SectionContainer id="sobre-mí">
-			<h3 class="text-2xl">Sobre Mí</h3>
-			<div class="flex flex-col w-full justify-between items-center  lg:flex-row-reverse ">
-				<Image src={fotoPersonal} alt='Logo' class="size-64 object-cover border-2 border-gray-400 " loading="eager"/>
+			<h3 class="text-3xl font-bold">Sobre Mí</h3>
+			<div class="flex flex-col w-full justify-between items-center  md:flex-row-reverse gap-6 ">
+				<Image 
+					src={fotoPersonal} 
+					alt="Logo." 
+					class="object-cover border-2 border-gray-400" 
+					loading="eager" 
+				/>
 				
-				<div class="flex flex-col gap-6 max-w-[564px] max-h-64 py-4 align-middle">
+				<div class="flex flex-col gap-6 max-w-xl max-h-64 text-justify ">
 					<p>Me llamo <strong>Alexis Chebeste</strong>, soy un desarrollador front-end. Me apasiona crear interfaces de usuario de alta calidad que sean fáciles de usar. </p>
-					<p>Tengo una sólida formación universitaria en desarrollo web front-end, en la cual estoy constantemente aprendiendo nuevas tecnologías para mejorar mis habilidades.  </p>
+					<p>Cuento con una sólida formación universitaria en desarrollo web front-end, y me esfuerzo por aprender continuamente nuevas tecnologías para mejorar mis habilidades y estar al día en este campo en constante evolución.</p>
 					<p>Disfruto trabajar con otros desarrolladores y diseñadores talentosos para crear experiencias digitales increíbles.</p>
 				</div>
 			</div>
 		</SectionContainer>
 		
 		<SectionContainer id="skills" >
-			<h3 class="text-2xl">Skills</h3>
+			<h3 class="text-3xl font-bold">Skills</h3>
 			<Skills />
 		</SectionContainer> 
 	</main>
