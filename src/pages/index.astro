@@ -8,7 +8,7 @@ import SocialPill from '../components/SocialPill.astro';
 import GitHubIcon from '../Icon/GitHub.astro';
 import Skills from '../components/Skills.astro';
 import SectionContainer from '../components/SectionContainer.astro';
-
+import Projects from '../components/Projects.astro';
 
 ---
 
@@ -59,11 +59,13 @@ import SectionContainer from '../components/SectionContainer.astro';
 				</div>
 			</div>
 		</SectionContainer>
-		
 		<SectionContainer id="skills" >
 			<h3 class="text-3xl font-bold">Skills</h3>
 			<Skills />
-		</SectionContainer> 
+		</SectionContainer>
+		<SectionContainer id="proyectos">
+			<h3 class="text-3xl font-bold">Proyectos</h3>
+			<Projects />
+		</SectionContainer>
 	</main>
-	
 </Layout>
