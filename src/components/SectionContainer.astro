@@ -2,6 +2,6 @@
 const {class: className, id} = Astro.props
 ---
 
-<section id={id} class={`flex flex-col justify-between gap-6 w-full max-w-7xl ${className}` }>
+<section id={id} class={`scroll-m-20 w-full mx-auto container gap-6 md:max-w-4xl lg:max-w-7xl ${className}` }>
     <slot/>
 </section>

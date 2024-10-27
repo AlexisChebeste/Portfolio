@@ -1,0 +1,20 @@
+---
+import SectionContainer from "./SectionContainer.astro";
+import {Image} from "astro:assets";
+import fotoPersonal from '../assets/foto-sobre-mi.jpg';
+---
+
+    <div class="flex flex-col w-full justify-between items-center  md:flex-row-reverse gap-6 ">
+        <Image 
+            src={fotoPersonal} 
+            alt="Logo." 
+            class="object-cover border-2 border-gray-400" 
+            loading="eager" 
+        />
+        
+        <div class="flex flex-col gap-6 max-w-xl md:max-h-64 text-justify ">
+            <p>Me llamo <strong>Alexis Chebeste</strong>, soy un desarrollador front-end. Me apasiona crear interfaces de usuario de alta calidad que sean fáciles de usar. </p>
+            <p>Cuento con una sólida formación universitaria en desarrollo web front-end, y me esfuerzo por aprender continuamente nuevas tecnologías para mejorar mis habilidades y estar al día en este campo en constante evolución.</p>
+            <p>Disfruto trabajar con otros desarrolladores y diseñadores talentosos para crear experiencias digitales increíbles.</p>
+        </div>
+    </div>

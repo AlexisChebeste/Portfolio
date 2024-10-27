@@ -1,0 +1,37 @@
+---
+import SectionContainer from "./SectionContainer.astro";
+import {Image} from 'astro:assets';
+import logoAlex from '../assets/logoAlex.svg'
+import LinkedInIcon from '../Icon/Linkedin.astro'
+import SocialPill from '../components/SocialPill.astro';
+import GitHubIcon from '../Icon/GitHub.astro';
+
+---
+
+<div class="flex flex-col lg:items-center gap-20  md:flex-row-reverse ">
+    <div class="flex justify-center md:justify-end w-full md:w-1/2 " >
+        <Image src={logoAlex} alt='Logo' loading="eager"/>
+    </div>
+    
+    
+    <div class="flex flex-col gap-6 max-w-xl justify-center w-full md:w-1/2">
+        <h1 class="text-gray-900 dark:text-white  text-5xl font-black">Hey, soy Alexis</h1>
+        <h2 class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
+            <strong >Desarrollador Front-End</strong> 
+            de Buenos Aires, Argentina. Especializado en aplicaciones web responsivas que brindan experiencias de usuario significativas.
+        </h2>
+        
+        <nav class="flex gap-x-2" >
+            <SocialPill href="https://www.linkedin.com/in/alexischebeste/" aria-label="Link a perfil de Linkedin">
+                <LinkedInIcon class="size-4"/> 
+                Linkedin 
+            </SocialPill>
+            <SocialPill href="https://github.com/AlexisChebeste" aria-label="Link a perfil de GitHub">
+                <GitHubIcon class="size-4"/> 
+                GitHub
+            </SocialPill>
+        </nav>
+<!-- 				<a href="http://" target="_blank" class="bg-blue-600  px-5 py-3 rounded-full flex justify-center items-center w-max hover:scale-110 hover:bg-white hover:text-black transition">Descargar CV</a> -->
+    </div>
+
+</div>

@@ -8,38 +8,49 @@ import TypeScriptIcon  from '../Icon/skills/TypeScript.astro';
 import ReactIcon  from '../Icon/skills/React.astro';
 import AstroIcon  from '../Icon/skills/Astro.astro';
 import TailwindCssIcon  from '../Icon/skills/TailwindCss.astro';
+
+const SKILLS = [
+	{
+		icon: HtmlIcon,
+		title: "Html"
+	},
+	{
+		icon: CssIcon,
+		title: "Css"
+	},
+	{
+		icon: JavaScriptIcon,
+		title: "JavaScript"
+	},
+	{
+		icon: TypeScriptIcon,
+		title: "TypeScript"
+	},
+	{
+		icon: ReactIcon,
+		title: "React"
+	},
+	{
+		icon: AstroIcon,
+		title: "Astro"
+	},
+	{
+		icon: TailwindCssIcon,
+		title: "TailwindCss"
+	}
+]
 ---
 
 <div class="flex flex-row gap-5 flex-wrap w-full max-w-7xl">
-    
-    <SkillBadge>
-		<HtmlIcon class="size-4 " />
-		Html
-	</SkillBadge>
-    <SkillBadge>
-		<CssIcon class="size-4"/>
-		Css
-	</SkillBadge>
-    <SkillBadge>
-		<JavaScriptIcon class="size-4"/>
-		JavaScript
-	</SkillBadge>
-    <SkillBadge>
-		<ReactIcon class="size-4"/>
-		React
-	</SkillBadge>
-    <SkillBadge>
-		<AstroIcon class="size-4"/>
-		Astro
-	</SkillBadge>
-    <SkillBadge>
-		<TypeScriptIcon class="size-4"/>
-		TypeScript
-	</SkillBadge>
-    <SkillBadge>
-		<TailwindCssIcon class="size-4"/>
-		Tailwind Css
-	</SkillBadge>
-    
-    
+	
+	{
+		SKILLS.map(({icon: IconComponent,title}) =>(
+			<SkillBadge>
+				<IconComponent class="size-4"/> 
+				{title}
+			</SkillBadge>
+		))
+	}
+		
+
 </div>
